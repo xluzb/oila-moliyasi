@@ -1,0 +1,6 @@
+{
+  "name": "Oila Moliya",
+  "description": "Oilaviy byudjet, kredit strategiyasi va moliyaviy rejalashtirish platformasi. Kreditlarni optimallashtirish, DTI hisoblagich, jamg'arma va AI maslahatchi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
