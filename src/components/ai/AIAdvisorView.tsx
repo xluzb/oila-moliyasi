@@ -124,6 +124,10 @@ export const AIAdvisorView: React.FC<AIAdvisorViewProps> = ({
         body: JSON.stringify({
           question: textToSend,
           contextData,
+          history: messages
+            .filter((m) => m.id !== 'welcome')
+            .slice(-6)
+            .map((m) => ({ role: m.sender === 'user' ? 'user' : 'model', text: m.text })),
         }),
       });
 
@@ -196,7 +200,7 @@ Tavsiya:
 
         <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300">
           <Bot className="w-4 h-4 text-emerald-600" />
-          <span>Gemini Pro faol</span>
+          <span>Gemini AI faol</span>
         </div>
       </div>
 
