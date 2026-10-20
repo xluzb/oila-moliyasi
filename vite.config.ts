@@ -24,6 +24,7 @@ export default defineConfig(() => {
           theme_color: '#065f46',
           background_color: '#0f172a',
           display: 'standalone',
+          lang: 'uz',
           start_url: '/',
           scope: '/',
           icons: [
@@ -49,6 +50,8 @@ export default defineConfig(() => {
         },
         workbox: {
           globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
+          // Keep API calls out of the SPA navigation fallback
+          navigateFallbackDenylist: [/^\/api\//],
         },
         devOptions: {
           enabled: false, // Prevents dev-sw issues across proxy/mobile devices while keeping full manifest
